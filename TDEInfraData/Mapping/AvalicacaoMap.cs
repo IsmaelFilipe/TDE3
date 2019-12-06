@@ -43,7 +43,7 @@ namespace TDEInfraData.Mapping
 
             builder.Property(c => c.ReducaoCusto)
                 .IsRequired()
-                .HasColumnName("ReducaoCusto");
+                .HasColumnName("ReduçãoCusto");
 
             builder.Property(c => c.Investimento)
                 .IsRequired()

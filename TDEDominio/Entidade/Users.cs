@@ -6,7 +6,7 @@ namespace TDEDominio.Entidade
 {
     public class Users : BaseEntity
     {
-        public string UserID { get; set; }
+        public string  UserID { get; set; }
         public string AcessKey { get; set; }
         public int userCreated { get; set; }
         public int lastUser { get; set; }

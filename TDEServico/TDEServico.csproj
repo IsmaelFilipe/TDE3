@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TDEDominio\TDEDominio.csproj" />
+    <ProjectReference Include="..\TDEInfraCrossCutting\TDEInfraCrossCutting.csproj" />
     <ProjectReference Include="..\TDEInfraData\TDEInfraData.csproj" />
   </ItemGroup>
 

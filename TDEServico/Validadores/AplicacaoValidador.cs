@@ -33,7 +33,7 @@ namespace TDEServico.Validadores
             RuleFor(c => c.Criatividade)
                 .NotEmpty().WithMessage("E necessario informar a  criatividade")
                 .NotNull().WithMessage("E necessario informar a  criatividade")
-                .Length(50);
+                .Length(1,50);
 
             RuleFor(c => c.DataInicio)
                 .NotEmpty().WithMessage("E necessario informa a Data de Inicio")

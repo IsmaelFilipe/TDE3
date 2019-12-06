@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TDEDominio.Entidade;
+using TDEInfraCrossCutting;
 
 namespace TDEServico.Validadores
 {
@@ -28,8 +29,8 @@ namespace TDEServico.Validadores
 
             RuleFor(c => c.CPF)
                .NotEmpty().WithMessage("E necessario informa o CPF")
-               .NotNull().WithMessage("E necessario informa o CPF");
-              // .Must(validacpf).WithMessage("CPF Inválido!");
+               .NotNull().WithMessage("E necessario informa o CPF")
+               .Must(validacpf).WithMessage("CPF Inválido!");
 
             RuleFor(c => c.DataNascimento)
                 .NotEmpty().WithMessage("E necessario informa a Data de Nascimento")
@@ -42,17 +43,17 @@ namespace TDEServico.Validadores
         }
         public static bool ValidaMaiorDeIdade(DateTime DataNascimento)
         {
-            // return DataNascimento <= DateTime.Now.AddYears(-14);
+            return DataNascimento <= DateTime.Now.AddYears(-14);
             //mesma coisa que
-            if (DataNascimento <= DateTime.Now.AddYears(-14))
-            {
-                return false;
-            }
-            return true;
+            //if (DataNascimento <= DateTime.Now.AddYears(-14))
+            //{
+            //    return false;
+            //}
+            //return true;
         }
-        //public static bool validacpf(string cpf)
-        //{
-        //    return validaCPF.cpfValido(cpf);
-        //}
+        public static bool validacpf(string cpf)
+        {
+            return validaCPF.cpfValido(cpf);
+        }
     }
 }

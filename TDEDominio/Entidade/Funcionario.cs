@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace TDEDominio.Entidade
@@ -10,6 +11,7 @@ namespace TDEDominio.Entidade
         public string Nome { get; set; }
         public string CPF { get; set; }
         public DateTime DataNascimento { get; set; }
+        [ForeignKey("Usuario")]
         public int CodUsuario { get; set; }
         public Usuario Usuario { get; set; }
 
