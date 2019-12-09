@@ -8,7 +8,6 @@ namespace TDEDominio.Entidade
     public class Campanha : BaseEntity
     {
         public int CodCampanha { get; set; }
-
         [ForeignKey("Funcionario")]
         public int CodFuncionario { get; set; }
         public Funcionario Funcionario { get; set; }

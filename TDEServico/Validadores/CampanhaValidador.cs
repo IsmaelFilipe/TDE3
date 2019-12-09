@@ -48,7 +48,7 @@ namespace TDEServico.Validadores
             RuleFor(c => c.Descricao)
                .NotEmpty().WithMessage("E necessario informa a Descricao")
                .NotNull().WithMessage("E necessario informa a Descricao")
-               .Length(500);
+               .Length(3,500);
 
             RuleFor(c => c.DataFim)
                 .NotEmpty().WithMessage("E necessario informa a Data de Terminio")

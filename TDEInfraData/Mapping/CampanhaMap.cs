@@ -37,7 +37,7 @@ namespace TDEInfraData.Mapping
 
             builder.Property(c => c.Descricao)
                 .IsRequired()
-                .HasColumnName("Descricao");
+                .HasColumnName("Descrição");
 
             builder.Property(c => c.DataFim)
                 .IsRequired()

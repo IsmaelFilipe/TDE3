@@ -10,5 +10,7 @@ namespace TDEDominio.Entidade
         public string Senha { get; set; }
         public string Login { get; set; }
         public string CPF { get; set; }
-        }
+
+        public ICollection<Funcionario> Funcionario { get; set; }
+    }
 }

@@ -11,7 +11,7 @@ namespace TDEInfraData.Mapping
     {
         public void Configure(EntityTypeBuilder<Endereco> builder)
         {
-            builder.ToTable("Endereco");
+            builder.ToTable("Endereço");
 
             builder.HasKey(c => c.CodEndereco);
 

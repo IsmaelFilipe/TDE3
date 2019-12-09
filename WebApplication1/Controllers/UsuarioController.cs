@@ -84,7 +84,7 @@ namespace WebApplication1.Controllers
                 if (resultado == null)
                     return NotFound();
                 service.Remove(id);
-                return Ok("Deleteado com sucesso o registro " + id.ToString());
+                return Ok("Deleteado com sucesso" + id.ToString());
             }
             catch (Exception ex)
             {
